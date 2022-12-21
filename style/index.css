@@ -61,10 +61,19 @@ table {
 
 /*General Styles*/
 
+
+
 html {
     font-size: 62.5%;
     font-family: 'Patrick Hand', cursive;
-    
+}
+
+body{
+    font-size: 1.6rem;;
+}
+
+h1{
+    font-size: 4rem;
 }
 
 header nav {
@@ -75,18 +84,25 @@ header nav {
 }
 
 .top {
-    display: flex;
-    justify-content: center;
+
 }
 
-.image-button {
-    background-image: url(https://picsum.photos/600/400);
+.top {
+
+     background-image: url(https://picsum.photos/600/400);
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
     font-size: large;
-    width: 600px;
-    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    text-align: center;
+}
+
+header section{
+    padding: 4% 0;
 }
 
 footer {
@@ -104,9 +120,15 @@ footer {
  .row {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 20px;
+
  }
+
+.row div{
+    width: 30%;
+    margin: 2% 0;
+}
 
 .portfolio {
     text-align: center;
@@ -126,46 +148,76 @@ button:hover {
 
 }
 
-
-
-
-
 button a {
     text-decoration: none;
     color: inherit;  /*color is inherited from it's parent */
   } 
 
-  /* a hover {
-    background-color: black;
-  }
-header .name {
-    font-size: 5rem;
-}
-
-.top .myprojects img {
-    margin: 10px;
+  
+@media (max-width: 800px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width:100%;
+        padding-bottom: 5%;
+       }
+      
+       .links{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+       }
     
-    display: flex;
-    justify-content: center;
-}
-#portfolio1 {
-    margin: 5px;
-    padding: 5px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
-    text-align: center;
-}
-#portfolio2 {
-    margin: 5px;
-    padding: 5px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
-    text-align: center;
+       .links button{
+        width: 20%;
+        margin:1% 0;
+       }
+    
+       .top{
+        width: 80%;
+        margin: 0 auto;
+       }
+
+       .row{
+        padding-top: 5%;
+        padding-bottom: 5%;
+       }
+    
+        .row div{
+            width: 40%;
+        }
+   
 }
 
+@media (max-width: 500px) {
+   nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+   }
+  
+   .links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+   }
 
- */
+   .links button{
+    width: 20%;
+    margin:1% 0;
+   }
+
+   .top{
+    width: 80%;
+    margin: 0 auto;
+   }
+
+    .row div{
+        width: 40%;
+    }
+
+}
